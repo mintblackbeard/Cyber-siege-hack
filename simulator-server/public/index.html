@@ -1,18 +1,71 @@
-<!-- Include socket.io-client library -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/3.0.3/socket.io.js"></script>
-<!-- Include moment.js library -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
-<!-- Include Chart.js library -->
-<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-
-<script type="module" src="index.js"></script>
-
-<!-- Container for the combined chart -->
-<h1>My service</h1>
-<b>MonteCarlo example probability: <div id='probability'>Waiting for sufficient data...</div></b>
-<b>MonteCarlo 2 disruption probability: <div id='probability2'>Waiting for sufficient data...</div></b>
-<b>MonteCarlo 3 disruption probability: <div id='probability3'>Waiting for sufficient data...</div></b>
-
-<div style="width: 80%; margin: 0 auto;">
-  <canvas id="combinedChart"></canvas>
-</div>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Service Dashboard</title>
+  <!-- Include necessary libraries -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/3.0.3/socket.io.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <!-- Include custom JavaScript -->
+  <script type="module" src="index.js"></script>
+  <!-- Include custom styles -->
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+    header {
+      background-color: #800020; /* Burgundy color for header */
+      color: white;
+      padding: 20px 0;
+      text-align: center;
+    }
+    footer {
+      background-color: #800020; /* Burgundy color for footer */
+      color: white;
+      padding: 10px 0;
+      text-align: center;
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    footer img {
+      height: 100px; /* Adjust height as needed */
+      border-radius: 20%;
+    }
+    #container {
+      width: 80%;
+      margin: 0 auto;
+      text-align: center;
+    }
+    #combinedChart {
+      width: 100%;
+      max-width: 800px; /* Adjust as needed */
+      margin: 20px auto;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Service Dashboard</h1>
+    <b>MonteCarlo example probability: <div id='probability'>Waiting for sufficient data...</div></b>
+    <b>MonteCarlo 2 disruption probability: <div id='probability2'>Waiting for sufficient data...</div></b>
+    <b>MonteCarlo 3 disruption probability: <div id='probability3'>Waiting for sufficient data...</div></b>
+  </header>
+  <main id="container">
+    <!-- Container for the combined chart -->
+    <canvas id="combinedChart"></canvas>
+  </main>
+  <footer>
+    <img src="Hackermangif.gif" alt="Hackerman gif" style="margin-right: auto;">
+    <p>Service Dashboard 2.0 made by Elliott, Liam, Iolo</p>
+    <img src="Hackergif.webp" alt="Hacker gif" style="margin-left: auto;">
+  </footer>
+</body>
+</html>
