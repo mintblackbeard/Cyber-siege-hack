@@ -12,6 +12,7 @@ const failureData = []; // Data to be passed to the chart
 
 
 import { runMonteCarloSimulation } from './monteCarloExample.mjs';
+import { runMonteCarloSimulation2 } from './monteCarlo2.mjs';
 import { updateChartData } from './chart.mjs';
 
 
@@ -33,4 +34,5 @@ socket.on('connectionCounts', (data) => {
 
   updateChartData(successData, failureData);
   runMonteCarloSimulation(connectionData, monteCarloSampleSize);
+  runMonteCarloSimulation2(connectionData, monteCarloSampleSize);
 });
