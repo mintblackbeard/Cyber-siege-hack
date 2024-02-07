@@ -19,7 +19,7 @@ import { updateChartData } from './chart.mjs';
 /**
  * Set up the socket & have it update the simulator and charts
  */ 
-const socket = io('http://127.0.0.1:3000');
+const socket = io('http://localhost:3000');
 socket.on('connectionCounts', (data) => {
   connectionData.push(data);
   successData.push(data.successfulConnections);
