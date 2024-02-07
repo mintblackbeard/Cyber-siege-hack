@@ -16,7 +16,7 @@ export const runMonteCarloSimulation2 = (connectionData, sampleSize) => {
   const averageFailureRate = calculateAverageFailureRate(sample);
 
   // Update the HTML with the result
-  const probabilityElement = document.getElementById('probability2');
+  const probabilityElement = document.getElementById('probability3');
   probabilityElement.textContent = `${(averageFailureRate * 100).toFixed(0)}%`;
 };
 
